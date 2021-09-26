@@ -1,0 +1,362 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'OpenSans';
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../font/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../font/OpenSans-Bold.ttf");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../font/OpenSans-SemiBold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../font/OpenSans-Medium.ttf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../font/OpenSans-Light.ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+p, blockquote, a {
+	color: #a6a6a6;
+	text-decoration: none;
+}
+
+p {
+	padding-bottom: 15px;
+	font-size: .95em;
+}
+
+h1, h2 {
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom: 25px;
+}
+
+.centered-div {
+	padding: 10% 5%;
+	text-align: center;
+}
+
+/* MENU */
+nav {
+	height: 10vh;
+	background-color: rgba(255, 204, 0, 1);
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+	font-size: 14px;
+	width: 50%;
+	height: 100%;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: auto;
+}
+
+.menu a {
+	color: white;
+	font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+	.menu {
+		position: fixed;
+		background-color: rgb(255, 204, 0);
+		height: 100vh;
+		width: 100%;
+		flex-direction: column;
+		clip-path: circle(100px at 90% -10%);
+		transition: all 1s ease-out;
+	}
+
+.open {
+	clip-path: circle(1500px at 90% -10%);
+}
+
+	.line {
+		width: 30px;
+		height: 2px;
+		background-color: #fff;
+		margin: 5px;
+		transition: all .2s ease-out ;
+	}
+
+	.crossline {
+		transform-origin: center;
+		transform: rotate(45deg) translateY(5px);
+	}
+
+	.crossline:nth-child(2) {
+		transform-origin: center;
+		transform: rotate(-45deg) translateY(-5px);
+	}
+
+	nav {
+		position: fixed;
+		height: 10vh;
+		width: 100%;
+	}
+
+	.navbar {
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		z-index: 100;
+		cursor: pointer;
+		transform: translate(-5%, -50%);
+	}
+
+	.menu li a {
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+
+}
+
+/* HERO SECTION */
+
+.hero-section {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	background-image: url(../img/temporary.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.hero-section .wrapper {
+	margin: auto;
+	text-align: center;
+}
+
+.hero-section h1 {
+	font-size: 2em;
+	letter-spacing: 0;
+	margin: 0;
+	color: #ffcc00;
+}
+.hero-section h2 {
+	font-weight: 100;
+	text-transform: uppercase;
+	margin: 0;
+	color: #fff;
+}
+
+/* UNDER-HERO */
+
+.under-hero {
+	padding: 10% 15%;
+	text-align: center;
+}
+
+.under-hero h1 {
+	margin-bottom: 15px;
+}
+
+.under-hero blockquote {
+	display: inline-block;
+	font-size: 1em;
+	margin-bottom: 40px;
+}
+
+/* WHO */
+.who div {
+	flex-basis: 50%;
+	background-color: #f8f8f8;
+}
+
+.who .who_img {
+	min-height: 350px;
+	padding: 0;
+	background-image: url(../img/team.jpg);
+	background-size: cover;
+}
+
+/* WHAT */
+.what div {
+	flex-basis: 50%;
+	background-color: #f8f8f8;
+}
+
+.what .what_img {
+	min-height: 350px;
+	padding: 0;
+	background-image: url(../img/what.jpg);
+	background-size: cover;
+}
+
+/* SERVICES* */
+
+.services .col {
+	padding: 20px;
+}
+
+.services .col h3 {
+	text-transform: uppercase;
+	font-size: 1.1em;
+}
+
+.service-img {
+	flex: 1;
+	min-height: 64px;
+	background-image: url(../img/icons/brand-hover.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: initial;
+}
+
+.col:nth-child(2) .service-img {
+	background-image: url(../img/icons/marketing-hover.png);
+}
+.col:nth-child(3) .service-img {
+	background-image: url(../img/icons/social-hover.png);
+}
+.col:nth-child(4) .service-img {
+	background-image: url(../img/icons/web-hover.png);
+}
+.col:nth-child(5) .service-img {
+	background-image: url(../img/icons/seo-hover.png);
+}
+.col:nth-child(6) .service-img {
+	background-image: url(../img/icons/influencer-hover.png);
+}
+
+
+.service-content {
+	flex: 2;
+}
+
+/* GRID */
+
+.col-text {
+	padding: 7% 10%;
+	text-align: center;
+}
+
+.col-xs-11 {width: 91.662%}
+.col-xs-10 {width: 83.332%;}
+.col-xs-9 {width: 75%;}
+.col-xs-8 {width: 66.662%;}
+.col-xs-7 {width: 58.331%}
+.col-xs-6 {width: 50%;}
+.col-xs-5 {width: 41.662%}
+.col-xs-4 {width: 33.332%;}
+.col-xs-3 {width: 25%;}
+.col-xs-2 {width: 16.662%;}
+.col-xs-1 {width: 8.332%;}
+
+@media screen and (min-width: 768px) {
+  .col-sm-11 {width: 91.662%}
+	.col-sm-10 {width: 83.332%;}
+	.col-sm-9 {width: 75%;}
+	.col-sm-8 {width: 66.662%;}
+	.col-sm-7 {width: 58.331%}
+	.col-sm-6 {width: 50%;}
+	.col-sm-5 {width: 41.662%}
+	.col-sm-4 {width: 33.332%;}
+	.col-sm-3 {width: 25%;}
+	.col-sm-2 {width: 16.662%;}
+	.col-sm-1 {width: 8.332%;}
+}
+
+@media screen and (min-width: 1024px) {
+  .col-md-11 {width: 91.662%}
+	.col-md-10 {width: 83.332%;}
+	.col-md-9 {width: 75%;}
+	.col-md-8 {width: 66.662%;}
+	.col-md-7 {width: 58.331%}
+	.col-md-6 {width: 50%;}
+	.col-md-5 {width: 41.662%}
+	.col-md-4 {width: 33.332%;}
+	.col-md-3 {width: 25%;}
+	.col-md-2 {width: 16.662%;}
+	.col-md-1 {width: 8.332%;}
+}
+
+@media screen and (min-width: 1280px) {
+  .col-lg-11 {width: 91.662%}
+	.col-lg-10 {width: 83.332%;}
+	.col-lg-9 {width: 75%;}
+	.col-lg-8 {width: 66.662%;}
+	.col-lg-7 {width: 58.331%}
+	.col-lg-6 {width: 50%;}
+	.col-lg-5 {width: 41.662%}
+	.col-lg-4 {width: 33.332%;}
+	.col-lg-3 {width: 25%;}
+	.col-lg-2 {width: 16.662%;}
+	.col-lg-1 {width: 8.332%;}
+}
+
+
+/* TABLET*/
+
+@media screen and (min-width: 768px) {
+
+/* GRID */
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col-text {
+	padding: 5%;
+	text-align: left;
+}
+
+/* GENERAL */
+h1, h2 {
+	font-size: 1.5em;
+}
+p {
+	font-size: 1em;
+}
+
+/* HERO */
+.hero-section h1 {
+	font-size: 3em;
+}
+
+/* WHAT */
+.what .row {
+	flex-direction: row-reverse;
+}
+
+/* SERVICES */
+.services .col {
+	margin-bottom: 20px;
+}
+
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 768px) {
+
+
+}
